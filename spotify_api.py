@@ -103,6 +103,8 @@ for track in top_tracks:
 
 # Testing track_data
 t_data = track_data("Kanye West", limit=50)
-print("\n Track Data")
+print("\nTrack Data")
 for track in t_data:
     print(track)
+
+save_json(p_data, '206_Final_Project/spotify.json')
