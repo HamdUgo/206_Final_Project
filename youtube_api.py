@@ -51,7 +51,7 @@ def save_json(data, file):
     with open(file, 'w') as f:
         json.dump(data, f, indent=4)
 
-#function calls
+# function calls to test if functions work
 data = data_request('US', 15)
 vid_list = most_popular_videos(data)
 print(vid_list)
