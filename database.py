@@ -32,7 +32,8 @@ def set_up_database():
     CREATE TABLE IF NOT EXISTS spotify(
         track_id TEXT PRIMARY KEY,
         title TEXT NOT NULL,
-        streams INTEGER
+        artist TEXT,
+        popularity INTEGER
     );
     '''
     )
