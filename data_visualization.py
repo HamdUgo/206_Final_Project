@@ -1,10 +1,18 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import database
+import sqlite3
+
 
 def scatter_plot():
-    # Place holders
-    spotify_popularity = []
-    lastfm_playcount = []
+    conn = sqlite3.connect('database.db')
+    cursor = conn.cursor()
+
+    cursor.execute("SELECT popularity FROM spotify")
+    spotify_popularity = cursor.fetchall()
+
+    cursor.execute('SELECT playcount FROM lastfm')
+    lastfm_playcount = cursor.fetchall()
 
     plt.figure(figsize=(8, 6))
     plt.scatter(spotify_popularity, lastfm_playcount, c='blue', edgecolors='black')
@@ -48,4 +56,4 @@ def box_plot():
     plt.tight_layout()
     plt.show()
 
-
+scatter_plot()
