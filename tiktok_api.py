@@ -4,7 +4,7 @@ import json
 API_KEY = 'BzUf0VvqpyhrPNjcREqVAOyp1sPsArvrqWyKSVxffYDPP7sW'
 api = TikAPI(API_KEY)
 
-def fetch_music_ids_from_trending_videos(limit=100):
+def fetch_music_ids_from_trending_videos(limit):
     """
     Extract music IDs from trending videos.
     :param limit: The number of music IDs to fetch.
@@ -40,7 +40,7 @@ def fetch_music_ids_from_trending_videos(limit=100):
         print(f"Response error: {e}, Status Code: {e.response.status_code}")
         return []
 
-top_music_ids = fetch_music_ids_from_trending_videos(limit=100)
+top_music_ids = fetch_music_ids_from_trending_videos(limit=10)
 
 #saves data from API to a JSON file
 def save_json(data, file):
