@@ -52,3 +52,5 @@ if tracks:
     print(tracks)
 else:
     print('error')
+
+save_json(top_tracks(100), 'lastfm.json')

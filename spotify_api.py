@@ -107,4 +107,4 @@ print("\nTrack Data")
 for track in t_data:
     print(track)
 
-save_json(p_data, '206_Final_Project/spotify.json')
+save_json(p_data, 'spotify.json')
